@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <title>Disappearing People Project</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jason Mayes">
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+  </head>  
+
+  <body>
+ 
+    <section id="demos" class="invisible">
+
+      <h2>Demo: Become Invisible</h2>
+      <p>Try this out using your webcam. Click on button below and wait a few seconds for the model to load. Stand about three feet away from your webcam and start walking around in front of the camera. <i>Watch as you rapidly disappear from the live video feed.</i></p>
+      <p>Note that non-human objects will still be seen moving in the background as normal. Best used in well-lit environments. Best experienced on a desktop computer. This demo has been repurposed by <a href="http://joellim.squarespace.com/">Joel Lim</a> based on code written by <a href="https://github.com/jasonmayes/Real-Time-Person-Removal">Jason Mayes</a> who produced this using Google's TensorFlow.js machine learning cloud platform.</p>
+      
+      <button id="webcamButton">Enable Webcam</button>
+ 
+    </section>
+  
+    <div id="liveView" class="webcam"> 
+        <video id="webcam" autoplay></video>
+       <div> 
+    
+    <!-- Load the bodypix model to recognize body parts in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    
+    <!-- Import the page's JavaScript-->
+    <script src="script.js" defer></script>
+
+  </body>
+</html>
